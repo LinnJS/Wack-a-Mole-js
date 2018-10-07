@@ -1,0 +1,49 @@
+{
+  "name": "wack-a-mole-js",
+  "version": "1.0.0",
+  "description": "Wack-a-Mole game built in vanilla JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "npm run test",
+    "dev": "webpack-dev-server --mode development --open",
+    "start": "webpack -p && node server.js",
+    "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
+    "lint:fix": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "TBA"
+  },
+  "keywords": [
+    "wack",
+    "a",
+    "mole",
+    "LinnJS",
+    "vanilla",
+    "js"
+  ],
+  "author": "Justin Linn",
+  "license": "ISC",
+  "dependencies": {
+    "css-loader": "^1.0.0",
+    "path": "^0.12.7",
+    "script-loader": "^0.7.2",
+    "style-loader": "^0.22.1",
+    "webpack": "^4.16.5",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.5"
+  },
+  "devDependencies": {
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.6.1",
+    "eslint-config-prettier": "^3.1.0",
+    "eslint-config-standard": "^12.0.0",
+    "eslint-plugin-import": "^2.14.0",
+    "eslint-plugin-jest": "^21.24.1",
+    "eslint-plugin-node": "^7.0.1",
+    "eslint-plugin-prettier": "^3.0.0",
+    "eslint-plugin-promise": "^4.0.1",
+    "eslint-plugin-standard": "^4.0.0",
+    "prettier": "^1.14.3"
+  }
+}
