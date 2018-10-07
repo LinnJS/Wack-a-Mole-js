@@ -9,4 +9,4 @@
 - Development mode with HotReloading: `npm run dev`
 
 ## Documentation
-See documentation at [https://linnjs.github.io/Wack-a-Mole-js/](https://linnjs.github.io/Wack-a-Mole-js/)
+See documentation at [https://linnjs.github.io/Whack-a-Mole-js/](https://linnjs.github.io/Whack-a-Mole-js/)
