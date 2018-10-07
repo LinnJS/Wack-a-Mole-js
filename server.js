@@ -9,7 +9,7 @@ http
     console.log('request ', request.url); // eslint-disable-line
 
     let filePath = '.' + request.url;
-    if (filePath == './') {
+    if (filePath == './') { // eslint-disable-line
       filePath = './index.html';
     }
 

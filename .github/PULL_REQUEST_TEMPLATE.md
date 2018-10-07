@@ -1,0 +1,12 @@
+## Description
+<DESCRIPTION GOES HERE>
+
+## Screenshot / GIPHY
+<SCREENSHOT OR GIPHY GOES HERE>
+
+## Expected Behavior
+<EXPECRTED BEHAVIOR GOES HERE>
+
+Acceptance Criteria:
+- [ ] <PR REQUIREMENT GOES HERE>
+- [ ] <PR REQUIREMENT GOES HERE>

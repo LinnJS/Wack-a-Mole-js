@@ -4,15 +4,20 @@
   "description": "Wack-a-Mole game built in vanilla JS",
   "main": "index.js",
   "scripts": {
-    "test": "npm run test",
     "dev": "webpack-dev-server --mode development --open",
     "start": "webpack -p && node server.js",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
-    "lint:fix": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public . --fix"
+    "lint:fix": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public . --fix",
+    "docs:build": "documentation build src/** -f html -o docs"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run lint && npm run docs:build"
+    }
   },
   "repository": {
     "type": "git",
-    "url": "TBA"
+    "url": "https://github.com/LinnJS/Wack-a-Mole-js"
   },
   "keywords": [
     "wack",
@@ -44,6 +49,7 @@
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
+    "husky": "^1.1.1",
     "prettier": "^1.14.3"
   }
 }
