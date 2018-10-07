@@ -1,7 +1,7 @@
 {
-  "name": "wack-a-mole-js",
+  "name": "whack-a-mole-js",
   "version": "1.0.0",
-  "description": "Wack-a-Mole game built in vanilla JS",
+  "description": "Whack-a-Mole game built in vanilla JS",
   "main": "index.js",
   "scripts": {
     "dev": "webpack-dev-server --mode development --open",
@@ -17,10 +17,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/LinnJS/Wack-a-Mole-js"
+    "url": "https://github.com/LinnJS/Whack-a-Mole-js"
   },
   "keywords": [
-    "wack",
+    "whack",
     "a",
     "mole",
     "LinnJS",
@@ -49,7 +49,9 @@
     "eslint-plugin-prettier": "^3.0.0",
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
+    "file-loader": "^2.0.0",
     "husky": "^1.1.1",
+    "image-webpack-loader": "^4.3.1",
     "prettier": "^1.14.3"
   }
 }
