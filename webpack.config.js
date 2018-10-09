@@ -1,9 +1,12 @@
+const path = require('path');
+
 module.exports = {
-  entry: ['./src/index.js', './src/index.css'],
+  entry: {
+    app: ['./src/app.js', './src/app.css'],
+  },
   output: {
-    path: __dirname,
-    publicPath: '/',
-    filename: 'build.js',
+    path: path.resolve(__dirname, 'build'),
+    filename: 'app.build.js',
   },
   module: {
     rules: [

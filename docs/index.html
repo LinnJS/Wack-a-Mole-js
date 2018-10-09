@@ -2,19 +2,19 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>wack-a-mole-js 1.0.0 | Documentation</title>
+  <title>whack-a-mole-js 1.0.0 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
   <link href='assets/github.css' type='text/css' rel='stylesheet' />
   <link href='assets/split.css' type='text/css' rel='stylesheet' />
-  <meta name='description' content='Wack-a-Mole game built in vanilla JS'>
+  <meta name='description' content='Whack-a-Mole game built in vanilla JS'>
 </head>
 <body class='documentation m0'>
     <div class='flex'>
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
-          <h3 class='mb0 no-anchor'>wack-a-mole-js</h3>
+          <h3 class='mb0 no-anchor'>whack-a-mole-js</h3>
           <div class='mb1'><code>1.0.0</code></div>
           <input
             placeholder='Filter'
@@ -26,9 +26,59 @@
               
                 
                 <li><a
-                  href='#addeventlistener'
+                  href='#randomtime'
                   class="">
-                  addEventListener
+                  randomTime
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#randomhole'
+                  class="">
+                  randomHole
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#peek'
+                  class="">
+                  peek
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#startgame'
+                  class="">
+                  startGame
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#whack'
+                  class="">
+                  whack
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#foreach'
+                  class="">
+                  forEach
                   
                 </a>
                 
@@ -49,19 +99,19 @@
   
   <div class='clearfix'>
     
-    <h3 class='fl m0' id='addeventlistener'>
-      addEventListener
+    <h3 class='fl m0' id='randomtime'>
+      randomTime
     </h3>
     
     
   </div>
   
 
-  <p>Hello World statement</p>
+  <p>Generates random time</p>
 
  
   
-    <div class='pre p1 fill-light mt0'>addEventListener</div>
+    <div class='pre p1 fill-light mt0'>randomTime(max: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>, min: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></div>
    
   
   
@@ -79,14 +129,306 @@
       
         <div class='space-bottom0'>
           <div>
-            <span class='code bold'>test</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
-	    testing documentation
+            <span class='code bold'>max</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    maximum milliseconds
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>min</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a>)</code>
+	    minimum milliseconds
 
           </div>
           
         </div>
       
     </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Number">number</a></code>:
+        amount of milliseconds with offset
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='randomhole'>
+      randomHole
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Randomizes hole selections</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>randomHole(holes: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>holes</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+	    NodeList of holes on game board
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>:
+        returns selected hole, re-runs function if there is a duplicate
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='peek'>
+      peek
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Toggles CSS class <code>peek</code> corresponding to <code>randomTime</code> and <code>randomHole</code></p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>peek()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='startgame'>
+      startGame
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Sets score to zero and starts game for duration of `setTimeout</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>startGame()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='whack'>
+      whack
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Increments score by 1 when onClick and checks to make sure input is valid (not a bot)</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>whack(event: any)</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>event</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='foreach'>
+      forEach
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Attaches eventListener to every mole so it can be WHACKED!</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>forEach</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
   
 
   
