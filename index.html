@@ -4,64 +4,74 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="src/app.css">
-  <title>Whack-a-Mole</title>
+  <link rel="stylesheet" href="./src/app.css">
+  <title>Whack-a-beaver</title>
 </head>
 
 <body>
-<div class="score-board" >
-  <h1>Whack-a-Mole!</h1>
-  <div class="wrapper">
-    <span class="score">0</span>
-    <span>TIME</span>
+<div class="wrapper">
+  <div class="score-board" >
+    <h1>Whack-a-beaver!</h1>
+    <div>
+      <div class="score-wrapper">
+        <div class="score-container">
+          <h2>SCORE</h2>
+          <span class="score">0</span>
+        </div>
+        <div class="score-container">
+          <h2>TIME</h2>
+          <span>0:00</span>
+        </div>
+      </div>
+    </div>
+    <button onClick="startGame()">Start!</button>
   </div>
-  <button onClick="startGame()">Start!</button>
-</div>
 
-<div class="cabinet">
-  <div class="row">
-    <div class="hole hole1">
-      <div class="mole"></div>
+  <div class="cabinet">
+    <div class="hole-row">
+      <div class="hole hole1">
+        <div class="beaver"></div>
+      </div>
+      <div class="hole hole2">
+        <div class="beaver"></div>
+      </div>
+      <div class="hole hole3">
+        <div class="beaver"></div>
+      </div>
+      <div class="hole hole4">
+        <div class="beaver"></div>
+      </div>
     </div>
-    <div class="hole hole2">
-      <div class="mole"></div>
+    <div class="hole-row">
+      <div class="hole hole5">
+        <div class="beaver"></div>
+      </div>
+      <div class="hole hole6">
+        <div class="beaver"></div>
+      </div>
+      <div class="hole hole7">
+        <div class="beaver"></div>
+      </div>
+      <div class="hole hole8">
+        <div class="beaver"></div>
+      </div>
     </div>
-    <div class="hole hole3">
-      <div class="mole"></div>
-    </div>
-    <div class="hole hole4">
-      <div class="mole"></div>
+    <div class="hole-row">
+      <div class="hole hole9">
+        <div class="beaver"></div>
+      </div>
+      <div class="hole hole10">
+        <div class="beaver"></div>
+      </div>
+      <div class="hole hole11">
+        <div class="beaver"></div>
+      </div>
+      <div class="hole hole12">
+        <div class="beaver"></div>
+      </div>
     </div>
   </div>
-  <div class="row">
-    <div class="hole hole5">
-      <div class="mole"></div>
-    </div>
-    <div class="hole hole6">
-      <div class="mole"></div>
-    </div>
-    <div class="hole hole7">
-      <div class="mole"></div>
-    </div>
-    <div class="hole hole8">
-      <div class="mole"></div>
-    </div>
-  </div>
-  <div class="row">
-    <div class="hole hole9">
-      <div class="mole"></div>
-    </div>
-    <div class="hole hole10">
-      <div class="mole"></div>
-    </div>
-    <div class="hole hole11">
-      <div class="mole"></div>
-    </div>
-    <div class="hole hole12">
-      <div class="mole"></div>
-    </div>
-  </div>
+  <script src="./src/app.js"></script>
 </div>
-<script src="./src/app.js"></script>
 </body>
 </html>

@@ -1,5 +1,5 @@
 html {
-  background: green;
+  background: url('./assets/grass.jpg') bottom repeat;
   box-sizing: border-box;
   font-size: 10px;
 }
@@ -12,17 +12,85 @@ body {
 }
 
 h1 {
+  color: #fff;
   font-size: 85px;
-  margin-bottom: 0;
+  margin: 0;
   text-align: center;
 }
 
-.score-board {
+h2 {
+  color: #fff;
+  font-size: 24px;
+  margin: 0;
+  text-align: center;
+}
+
+.wrapper {
   display: flex;
   flex-direction: column;
+  justify-content: center;
+}
+
+.score-board {
   align-items: center;
-  justify-content: space-around;
+  align-self: center;
+  background-color: maroon;
+  border-radius: 10px;
+  border: gold 6px solid;
+  display: flex;
+  flex-direction: column;
   height: 300px;
+  justify-content: space-between;
+  min-width: 500px;
+  padding: 30px 10px 30px 10px;
+  width: 50%;
+  margin-top: 150px;
+  box-shadow: 2px 4px 2px black, 4px 6px 8px black;
+}
+
+.score-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 400px;
+}
+
+.score-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.score-board span {
+  background-color: black;
+  color: gold;
+  font-size: 20px;
+  height: 25px;
+  padding: 5px;
+  width: 60px;
+}
+
+.score-board button {
+  height: 40px;
+  background: gold;
+  border: 1px solid black;
+  box-shadow: 0 2px 0 black, 2px 4px 6px black;
+  font-weight: 600;
+  letter-spacing: 1px;
+  transition: all 150ms linear;
+  color: black;
+  font-size: 20px;
+  padding: 5px 10px 5px 10px;
+}
+
+.score-board button:hover {
+  background: black;
+  border: 2px solid gold;
+  box-shadow: 1px 1px 2px black;
+  color: gold;
+  text-decoration: none;
+  transition: all 250ms linear;
 }
 
 .cabinet {
@@ -31,7 +99,7 @@ h1 {
   flex-wrap: wrap;
 }
 
-.row {
+.hole-row {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -57,16 +125,17 @@ h1 {
   bottom: -20px;
 }
 
-.mole {
-  background: url('./assets/mole.png') bottom center no-repeat;
+.beaver {
+  background: url('./assets/beaver.png') bottom center no-repeat;
   background-size: 100%;
   position: absolute;
   top: 100%;
   width: 200px;
   height: 200px;
   transition: all 0.4s;
+  cursor: pointer;
 }
 
-.hole.peek .mole {
-  top: 20px;
+.hole.peek .beaver {
+  top: 15px;
 }

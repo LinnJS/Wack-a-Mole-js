@@ -1,25 +1,35 @@
+/** Selects NodeList of all holes */
 const holes = document.querySelectorAll('.hole');
-const scoreBoard = document.querySelector('.score');
-const moles = document.querySelectorAll('.mole');
 
+/** Selects NodeList of all beaver */
+const beavers = document.querySelectorAll('.beaver');
+
+/** Selects score so it can be manipulated by startGame() and whack() to reflect current score */
+const scoreBoard = document.querySelector('.score');
+
+/** Global variable that gets reassigned to current index of selected hole to find duplicates */
 let duplicateHole;
-let timeOut = false;
+
+/** Global variable that gets reassigned to reflect current score */
 let score = 0;
 
+/** Global boolean value that gives current state of game */
+let timeOut = false;
+
 /**
- * Generates random time
- * @param {number} max - maximum milliseconds
- * @param {number} min - minimum milliseconds
- * @return {number} amount of milliseconds with offset
+ * randomTime() - Generates random time
+ * @param {number} max - Maximum milliseconds
+ * @param {number} min - Minimum milliseconds
+ * @return {number} Amount of milliseconds with offset
  */
 function randomTime(max, min) {
   return Math.round(Math.random() * (max - min) + min);
 }
 
 /**
- * Randomizes hole selections
+ * randomHole() - Randomize hole selections
  * @param {object} holes - NodeList of holes on game board
- * @return {object} returns selected hole, re-runs function if there is a duplicate
+ * @return {object} randomHole - Selected hole, re-runs function if there is a duplicate
  */
 function randomHole(holes) {
   const index = Math.floor(Math.random() * holes.length);
@@ -32,9 +42,7 @@ function randomHole(holes) {
   return hole;
 }
 
-/**
- * Toggles CSS class `peek` corresponding to `randomTime` and `randomHole`
- */
+/** peek() - Toggles CSS class `peek` corresponding to `randomTime` and `randomHole` */
 function peek() {
   const time = randomTime(1000, 1400);
   const hole = randomHole(holes);
@@ -45,20 +53,16 @@ function peek() {
   }, time);
 }
 
-/**
- * Sets score to zero and starts game for duration of `setTimeout
- */
+/** startGame() - Set score to zero and starts game for duration of `setTimeout */
 function startGame() { /*eslint-disable-line*/
   scoreBoard.textContent = 0;
   timeOut = false;
   score = 0;
   peek();
-  setTimeout(() => (timeOut = true), 10000);
+  setTimeout(() => (timeOut = true), 15000);
 }
 
-/**
- * Increments score by 1 when onClick and checks to make sure input is valid (not a bot)
- */
+/** whack() - Increments score by 1 when onClick and checks to make sure input is valid (not a bot) */
 function whack(event) {
   if (!event.isTrusted) return;
   score++;
@@ -66,7 +70,5 @@ function whack(event) {
   scoreBoard.textContent = score;
 }
 
-/**
- * Attaches eventListener to every mole so it can be WHACKED!
- */
-moles.forEach(mole => mole.addEventListener('click', whack));
+/** forEach() beaver - Attach eventListener to every beaver so it can be WHACKED! */
+beavers.forEach(beaver => beaver.addEventListener('click', whack));

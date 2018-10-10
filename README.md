@@ -6,7 +6,7 @@
 ## Additional Scripts
 - ESLint: `npm run lint`
 - ESLint with formatting: `npm run lint:fix`
-- Development mode with HotReloading: `npm run dev`
+- Development mode with Hot Reloading: `npm run dev`
 
 ## Documentation
 See documentation at [https://linnjs.github.io/Whack-a-Mole-js/](https://linnjs.github.io/Whack-a-Mole-js/)
