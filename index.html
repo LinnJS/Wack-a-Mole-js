@@ -6,11 +6,12 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <link rel="stylesheet" href="./src/app.css">
   <title>Whack-a-beaver</title>
+  <script async src="./src/app.js"></script>
 </head>
 
 <body>
 <div class="wrapper">
-  <div class="score-board" >
+  <div class="scoreboard" >
     <h1>Whack-a-beaver!</h1>
     <div>
       <div class="score-wrapper">
@@ -18,13 +19,11 @@
           <h2>SCORE</h2>
           <span class="score">0</span>
         </div>
-        <div class="score-container">
-          <h2>TIME</h2>
-          <span>0:00</span>
-        </div>
       </div>
     </div>
-    <button onClick="startGame()">Start!</button>
+    <div class="button-container">
+      <button class="start" onClick="startGame()">Start!</button>
+    </div>
   </div>
 
   <div class="cabinet">
@@ -71,7 +70,6 @@
       </div>
     </div>
   </div>
-  <script src="./src/app.js"></script>
 </div>
 </body>
 </html>
