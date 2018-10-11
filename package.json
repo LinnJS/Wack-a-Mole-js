@@ -1,18 +1,17 @@
 {
-  "name": "whack-a-mole-js",
+  "name": "whack-a-beaver-js",
   "version": "1.0.0",
-  "description": "Whack-a-Mole game built in vanilla JS",
+  "description": "Whack-a-beaver game built in vanilla JS",
   "main": "index.js",
   "scripts": {
-    "dev": "webpack-dev-server --mode development --open",
-    "start": "webpack -p && node server.js",
+    "start": "webpack-dev-server --mode development --open",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "lint:fix": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public . --fix",
-    "docs:build": "documentation build src/** -f html -o docs"
+    "docs": "documentation build src/** -f html -o docs"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run lint && npm run docs:build"
+      "pre-commit": "npm run lint && npm run docs"
     }
   },
   "repository": {
