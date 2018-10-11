@@ -7,13 +7,16 @@ const beavers = document.querySelectorAll('.beaver');
 /** Selects score so it can be manipulated by startGame() and whack() to reflect current score */
 const scoreBoard = document.querySelector('.score');
 
-/** */
+/** Selects startButton */
 const startButton = document.querySelector('.start');
 
 /** Global variable that gets reassigned to current index of selected hole to find duplicates */
 let duplicateHole;
 
+/** Global variable to end game */
 let endGameTimeout;
+
+/** Global variable stop all beaver movement */
 let peekTimeout;
 
 /** Global variable that gets reassigned to reflect current score */
@@ -62,6 +65,7 @@ function peek() {
   }, time);
 }
 
+/** createInGameButtons() - Creates inGame buttons and only displays them while game is in play mode */
 function createInGameButtons() {
   const container = document.querySelector('.button-container');
   const resetButton = document.createElement('button');
@@ -75,6 +79,7 @@ function createInGameButtons() {
     isTimeout = true;
   }
 
+  /** onReset() - Resets score, timeOuts, adds games intermission, and auto plays a new round */
   function onReset() {
     resetButtons();
     startButton.style.display = 'none';
