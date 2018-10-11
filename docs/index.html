@@ -2,19 +2,19 @@
 <html>
 <head>
   <meta charset='utf-8' />
-  <title>whack-a-mole-js 1.0.0 | Documentation</title>
+  <title>whack-a-beaver-js 1.0.0 | Documentation</title>
   <meta name='viewport' content='width=device-width,initial-scale=1'>
   <link href='assets/bass.css' type='text/css' rel='stylesheet' />
   <link href='assets/style.css' type='text/css' rel='stylesheet' />
   <link href='assets/github.css' type='text/css' rel='stylesheet' />
   <link href='assets/split.css' type='text/css' rel='stylesheet' />
-  <meta name='description' content='Whack-a-Mole game built in vanilla JS'>
+  <meta name='description' content='Whack-a-beaver game built in vanilla JS'>
 </head>
 <body class='documentation m0'>
     <div class='flex'>
       <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
         <div class='py1 px2'>
-          <h3 class='mb0 no-anchor'>whack-a-mole-js</h3>
+          <h3 class='mb0 no-anchor'>whack-a-beaver-js</h3>
           <div class='mb1'><code>1.0.0</code></div>
           <input
             placeholder='Filter'
@@ -76,6 +76,26 @@
               
                 
                 <li><a
+                  href='#endgametimeout'
+                  class="">
+                  endGameTimeout
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#peektimeout'
+                  class="">
+                  peekTimeout
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
                   href='#score'
                   class="">
                   score
@@ -119,6 +139,26 @@
                   href='#peek'
                   class="">
                   peek
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#createingamebuttons'
+                  class="">
+                  createInGameButtons
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#onreset'
+                  class="">
+                  onReset
                   
                 </a>
                 
@@ -321,7 +361,8 @@
   </div>
   
 
-  
+  <p>Selects startButton</p>
+
  
   
     <div class='pre p1 fill-light mt0'>startButton</div>
@@ -373,6 +414,102 @@
  
   
     <div class='pre p1 fill-light mt0'>duplicateHole</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='endgametimeout'>
+      endGameTimeout
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Global variable to end game</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>endGameTimeout</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='peektimeout'>
+      peekTimeout
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Global variable stop all beaver movement</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>peekTimeout</div>
    
   
   
@@ -666,6 +803,102 @@
  
   
     <div class='pre p1 fill-light mt0'>peek()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='createingamebuttons'>
+      createInGameButtons
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>createInGameButtons() - Creates inGame buttons and only displays them while game is in play mode</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>createInGameButtons()</div>
+   
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='onreset'>
+      onReset
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>onReset() - Resets score, timeOuts, adds games intermission, and auto plays a new round</p>
+
+ 
+  
+    <div class='pre p1 fill-light mt0'>onReset()</div>
    
   
   
