@@ -4,6 +4,9 @@ const holes = document.querySelectorAll('.hole');
 /** Selects NodeList of all beaver */
 const beavers = document.querySelectorAll('.beaver');
 
+
+
+
 /** Selects score so it can be manipulated by startGame() and whack() to reflect current score */
 const scoreBoard = document.querySelector('.score');
 
