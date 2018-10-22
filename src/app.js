@@ -158,5 +158,7 @@ function whack(event) {
   scoreBoard.textContent = score;
 }
 
+
+
 /** forEach() beaver - Attach eventListener to every beaver so it can be WHACKED! */
 beavers.forEach(beaver => beaver.addEventListener('click', whack));
